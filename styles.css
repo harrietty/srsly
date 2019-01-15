@@ -1,0 +1,17 @@
+body {
+  background-color: beige;
+  font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+  font-family: 'Baloo Bhaina', cursive;
+  color: #5f9ea0;
+  font-size: 6em;
+  margin: 0;
+}
+
+h4 {
+  font-size: 2em;
+  font-weight: 100;
+  margin: 0;
+}
