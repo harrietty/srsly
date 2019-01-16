@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --exit ./spec",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "lint": "eslint ./"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git-codecommit.eu-west-1.amazonaws.com/v1/repos/srsly"
+    "url": "ssh://git@github.com:harrietty/srsly.git"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,11 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "chai": "^4.2.0",
+    "eslint": "^5.12.0",
+    "eslint-config-google": "^0.11.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "supertest": "^3.4.1"
   }
 }
