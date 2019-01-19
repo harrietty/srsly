@@ -6,7 +6,9 @@ const expressSession = require('express-session');
 const FileStore = require('session-file-store')(expressSession);
 const app = express();
 const passport = require('./lib/passport');
-const requireAuth = require('./lib/middlewares/requireAuth');
+const {requireSignin, requireAuth} = require('./lib/middlewares/requireAuth');
+const apiRouter = require('./lib/routers/api.router');
+const {getDecks} = require('./lib/db/decks');
 
 const PORT = process.env.PORT || 3000;
 
@@ -26,9 +28,12 @@ app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', requireAuth, (req, res) => {
+app.use('/api', requireAuth, apiRouter);
+
+app.get('/', requireSignin, (req, res) => {
   const {user} = req;
-  return res.render('home', {user});
+  const decks = getDecks(user.email);
+  return res.render('home', {user, decks});
 });
 
 app.get('/signin', (req, res) => {
