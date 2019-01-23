@@ -1,28 +1,35 @@
 <%- include('header') %>
-<h4><%= user.email %>'s Decks:</h4>
-
 <div class="container">
-  <div class="columns">
-    <div class="col-md-10 col-8 col-mx-auto">
-      <div class="container">
-        <div class="columns">
-        <% decks.forEach(deck => { %>
-          <div class="column col-xs-12 col-sm-6 col-4 deckItem">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title h5"><%= deck.name %></div>
-                <div class="card-subtitle text-gray"><%= deck.totalCards %> cards</div>
+  <h1>Srsly.</h1>
+
+  <section>
+    <h4><%= user.email %>'s Decks:</h4>
+    <div class="container">
+      <div class="columns">
+        <div class="col-md-10 col-8 col-mx-auto">
+          <div class="container">
+            <div class="columns">
+            <% decks.forEach(deck => { %>
+              <div class="column col-xs-12 col-sm-6 col-4 deckItem">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title h5"><%= deck.name %></div>
+                    <div class="card-subtitle text-gray"><%= deck.totalCards %> cards</div>
+                  </div>
+                </div>
               </div>
+            <% }) %>
             </div>
           </div>
-        <% }) %>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<a href='/signout'>
-  <button class="btn">Sign Out</button>
-</a>
+  <section>
+    <a href='/signout'>
+      <button class="btn">Sign Out</button>
+    </a>
+  </section>
+</div>
 <%- include('footer') %>

@@ -1,21 +1,54 @@
 body {
-  background-color: beige;
-  font-family: 'Helvetica', sans-serif;
+  background-color: #13A5A1;
+  font-family: 'Quicksand', sans-serif;
 }
 
 h1 {
   font-family: 'Baloo Bhaina', cursive;
-  color: #5f9ea0;
-  font-size: 6em;
-  margin: 0;
-}
-
-h4 {
-  font-size: 2em;
-  font-weight: 100;
-  margin: 0;
+  color: whitesmoke;
+  font-size: 4rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .deckItem {
   margin-bottom: 20px;
+}
+
+a:link, a:visited, a:active {
+  color: #FFDFD3;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+a:hover {
+  font-weight: 600;
+}
+
+a .btn, .btn {
+  background-color: #fff;
+  border: none;
+  color: darkslategray;
+}
+
+a .btn:hover {
+  border: none;
+}
+
+footer {
+  background: lightgoldenrodyellow;
+  text-align: center;
+  padding: 50px;
+}
+
+footer a:link, footer a:visited, footer a:active {
+  color: #FF5B1D;
+}
+
+section {
+  padding-bottom: 20px;
+}
+
+#sign-in p, #sign-in label {
+  color: #FFF7FB;
 }

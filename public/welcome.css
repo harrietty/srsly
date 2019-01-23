@@ -1,0 +1,100 @@
+h1.welcomeTitle {
+  font-family: 'Baloo Bhaina', cursive;
+  color: whitesmoke;
+  font-size: 8rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  margin-top: -37px;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: floralwhite;
+  font-weight: 100;
+  padding: 10px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 2.2em;
+  font-weight: 100;
+  margin: 0;
+}
+
+#navLinks {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+}
+
+#navLinks ul {
+  list-style-type: none;
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+}
+
+#welcomeImg {
+  width: 100%;
+  padding: 30px;
+}
+
+.titleCol {
+  flex-direction: column;
+  justify-content: center;
+}
+
+#welcomeSection:after {
+  content: "";
+  width: 100%;
+  height: 80px;
+  display: block;
+  background-image: linear-gradient(to bottom right,#13A5A1, 50%,#FFF7FB 0);
+  position: relative;
+  top: 20px;
+}
+
+#about:after {
+  content: "";
+  width: 100%;
+  height: 80px;
+  display: block;
+  background-image: linear-gradient(to bottom left,#FFF7FB, 50%,#13A5A1 0);
+  position: relative;
+  top: 20px;
+}
+
+#about p {
+  text-align: center;
+}
+
+#about {
+  background-color: #FFF7FB;
+}
+
+#about h4, #how-it-works h4 {
+  margin: 30px;
+  text-align: center;
+}
+
+#how-it-works h4 {
+  color: #FFF7FB;
+}
+
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instruction-how {
+  font-size: 1.3em;
+  color: #FFF7FB;
+  font-weight: 100;
+  text-align: center;
+}
+
+#useage-instructions .columns {
+  margin-top: 30px;
+}

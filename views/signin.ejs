@@ -1,20 +1,24 @@
 <%- include('header') %>
-<div class="columns">
-  <div class="column col-6 col-mx-auto">
-    <form action="/login" method="post">
-      <div class="form-group">
-        <label class="form-label" for="email">Email:</label>
-        <input class="form-input"  type="text" name="email"/>
+<div class="container" id="sign-in">
+  <h1>Srsly.</h1>
+  <section>
+    <div class="columns">
+      <div class="column col-6 col-mx-auto">
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-input"  type="text" name="email"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="password">Password:</label>
+            <input class="form-input"  type="password" name="password"/>
+          </div>
+          <div class="form-group">
+            <button class="btn input-group-btn" type="submit">Sign In</button>
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-        <label class="form-label" for="password">Password:</label>
-        <input class="form-input"  type="password" name="password"/>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary input-group-btn" type="submit">Sign In</button>
-      </div>
-    </form>
-  </div>
+    </div>
+  </section>
 </div>
-
 <%- include('footer') %>

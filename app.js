@@ -30,7 +30,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', requireAuth, apiRouter);
 
-app.get('/', requireSignin, (req, res) => {
+app.get('/', (req, res) => {
+  res.render('welcome');
+});
+
+app.get('/home', requireSignin, (req, res) => {
   const {user} = req;
   const decks = getDecks(user.email);
   return res.render('home', {user, decks});
@@ -42,7 +46,7 @@ app.get('/signin', (req, res) => {
 
 app.post('/login', passport.authenticate('local'), (req, res) => {
   // If this function gets called, authentication was successful.
-  res.redirect('/');
+  res.redirect('/home');
 });
 
 app.get('/signout', (req, res) => {
