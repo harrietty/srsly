@@ -21,18 +21,19 @@ class User {
       else cb(null, res);
     });
   }
+
+  /**
+ * Finds a user instance by email
+ * @param {String} email
+ * @return {Object|null}
+ */
+  static find(email) {
+    console.log('***********');
+    return user.email === email ? user : null;
+  }
 }
 
 // Temporary User in place of a database of users
 const user = new User('hat', '$2b$10$Ex1fB7UrRKc.6irX/MA2nO2zsjZyidfyzaCe0PkfFDgPyhyF7mjKC');
 
-/**
- * Finds a user instance by email
- * @param {String} email
- * @return {Object|null}
- */
-const findUser = (email) => {
-  return user.email === email ? user : null;
-};
-
-module.exports = findUser;
+module.exports = User;

@@ -22,8 +22,13 @@ app.use(expressSession({
 }));
 
 app.use(bodyParser.json());
+
+// TODO: Is sending URL-encoded password safe?
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(passport.initialize());
+
+// Authenticates the session that was provided by express.session
+// Deserializes the user from the data store
 app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, 'public')));
